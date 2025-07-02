@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simo – Premium T‑Shirt</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Custom utilities: pulse glow -->
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    /* Tambahkan utilities kustom ke lapisan utilities Tailwind */
+    @layer utilities {
+
+      /* Biru muda – WhatsApp/Admin */
+      @keyframes pulse-blue {
+
+        0%,
+        100% {
+          box-shadow: 0 0 12px #00ffe1;
+        }
+
+        50% {
+          box-shadow: 0 0 22px #00ffe1;
+        }
+      }
+
+      .pulse-blue {
+        animation: pulse-blue 2.5s ease-in-out infinite;
+      }
+
+      /* Pink – TikTok */
+      @keyframes pulse-pink {
+
+        0%,
+        100% {
+          box-shadow: 0 0 12px #ff0050;
+        }
+
+        50% {
+          box-shadow: 0 0 22px #ff0050;
+        }
+      }
+
+      .pulse-pink {
+        animation: pulse-pink 2.5s ease-in-out infinite;
+      }
+
+      /* Ungu‑pink – Instagram */
+      @keyframes pulse-purple {
+
+        0%,
+        100% {
+          box-shadow: 0 0 12px #d62976;
+        }
+
+        50% {
+          box-shadow: 0 0 22px #d62976;
+        }
+      }
+
+      .pulse-purple {
+        animation: pulse-purple 2.5s ease-in-out infinite;
+      }
+    }
+
+    .logo-text {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: #00ffe1;
+      text-shadow: 0 0 12px #00ffe1;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white min-h-screen flex flex-col">
+
+  <!-- Header (logo & judul di paling atas) -->
+  <header class="w-full flex flex-col items-center pt-6">
+    <div class="logo-text">SIMO</div>
+    <h1 class="text-xl font-bold mt-2">Premium T-Shirt</h1>
+    <p class="text-gray-400 text-sm">Simple & Modern</p>
+  </header>
+
+  <!-- Tombol di tengah layar -->
+  <main class="flex-grow flex items-center justify-center">
+    <div class="w-full max-w-sm space-y-4 px-4">
+      <!-- Kontak (pulse biru) -->
+      <a href="https://wa.me/6283824827233"
+        class="block w-full bg-black text-white font-semibold py-3 px-4 rounded-xl text-center pulse-blue hover:brightness-110 transition">
+        Kontak Admin
+      </a>
+
+      <!-- TikTok (pulse pink) -->
+      <a href="https://www.tiktok.com/@simostore.id?is_from_webapp=1&sender_device=pc"
+        class="block w-full bg-black text-white font-semibold py-3 px-4 rounded-xl text-center pulse-pink hover:brightness-110 transition">
+        TikTok Simo
+      </a>
+
+      <!-- Instagram (pulse ungu‑pink) -->
+      <a href="https://www.instagram.com/simpelmodern.id?igsh=MTA0eTUyNXNqNXZwZw=="
+        class="block w-full bg-black text-white font-semibold py-3 px-4 rounded-xl text-center pulse-purple hover:brightness-110 transition">
+        Instagram Simo
+      </a>
+    </div>
+  </main>
+
+</body>
+
+</html>
